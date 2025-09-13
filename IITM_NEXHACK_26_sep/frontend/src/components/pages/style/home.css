@@ -1,0 +1,56 @@
+/* ===== Home Page Styles ===== */
+
+.home_intro_section {
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+.home_heading {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0f172a; /* deep slate */
+    margin-bottom: 0.5rem;
+}
+
+.home_intro {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #475569; /* slate gray */
+}
+
+/* Generic content sections */
+.home_section {
+    margin: 3rem auto;
+    max-width: 800px;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.home_subheading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 0.5rem;
+}
+
+.home_text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #4b5563;
+}
+
+.start_home {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4f46e5; /* nice purple */
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.start_home:hover {
+  background-color: #3730a3; /* darker shade on hover */
+}

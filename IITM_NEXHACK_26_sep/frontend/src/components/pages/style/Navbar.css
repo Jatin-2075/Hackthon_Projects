@@ -1,0 +1,81 @@
+/* Navbar container */
+.navbar_section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2.5rem;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Brand title */
+.heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #4f46e5, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: .5px;
+  cursor: pointer;
+  transition: transform .25s ease;
+}
+.heading:hover {
+  transform: scale(1.05);
+}
+
+/* Link holder */
+.navbar_link_holder {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Links */
+.top_link {
+  position: relative;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #374151;
+  transition: color .25s ease;
+}
+
+/* Hover effect */
+.top_link:hover {
+  color: #111827;
+}
+
+/* Active link underline animation */
+.top_link.active {
+  color: #4f46e5;
+}
+.top_link.active::after,
+.top_link:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #4f46e5, #06b6d4);
+  transform: scaleX(1);
+  transition: transform .3s ease;
+}
+.top_link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #4f46e5, #06b6d4);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .3s ease;
+}
+.top_link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}

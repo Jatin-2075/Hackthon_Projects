@@ -1,0 +1,118 @@
+/* ===== BMI Component Styles ===== */
+
+.bmi_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.bmi_card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.bmi_card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+}
+
+.bmi_heading {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: .5rem;
+  background: linear-gradient(90deg, #4f46e5, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bmi_intro {
+  margin-bottom: 1.5rem;
+}
+.bmi_intro p {
+  font-size: .95rem;
+  color: #475569;
+  line-height: 1.4;
+}
+
+/* Toggle Buttons (Show/Hide) */
+.bmi_toggle_btn {
+  background: linear-gradient(90deg, #4f46e5, #06b6d4);
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  padding: .6rem 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform .25s ease, box-shadow .25s ease;
+  margin-bottom: 1.5rem;
+}
+
+.bmi_toggle_btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+/* Input groups */
+.bmi_input_group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.bmi_label {
+  font-size: .9rem;
+  font-weight: 500;
+  margin-bottom: .3rem;
+  color: #374151;
+}
+
+.bmi_input {
+  padding: .6rem .8rem;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.1);
+  font-size: .95rem;
+  outline: none;
+  transition: border-color .25s ease, box-shadow .25s ease;
+}
+
+.bmi_input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79,70,229,0.15);
+}
+
+/* Calculate button + result */
+.bmi_result_section {
+  margin-top: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+
+.bmi_calc_btn {
+  background: #4f46e5;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  padding: .7rem 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform .25s ease, background .25s ease;
+}
+
+.bmi_calc_btn:hover {
+  transform: translateY(-2px);
+  background: #4338ca;
+}
+
+.bmi_result {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #111827;
+}
