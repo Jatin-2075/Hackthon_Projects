@@ -5,6 +5,7 @@ import Dashboard from './components/pages/Dashboard'
 import Diet_plan from './components/pages/Dietplan'
 import Workout from './components/pages/Workout'
 import Home from './components/pages/Home'
+import Data from './components/pages/data'
 
 function App() {
   const Router = createBrowserRouter([
@@ -23,6 +24,10 @@ function App() {
     {
       path: '/Workout',
       element: <><Navbar /><Workout /></>
+    },
+    {
+      path : '/Data',
+      element : <><Navbar/> <Data/> </>
     }
   ])
 

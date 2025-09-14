@@ -6,7 +6,7 @@ const Dashboard = () => {
         <div>
             <div>
                 <div>
-                    <BMI />
+                    
                 </div>
             </div>
         </div>

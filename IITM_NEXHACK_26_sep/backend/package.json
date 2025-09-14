@@ -1,0 +1,24 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "iitm project",
+  "homepage": "https://github.com/Jatin-2075/Hackthon_Projects#readme",
+  "bugs": {
+    "url": "https://github.com/Jatin-2075/Hackthon_Projects/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jatin-2075/Hackthon_Projects.git"
+  },
+  "license": "ISC",
+  "author": "jatin",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

@@ -15,6 +15,15 @@ const Home = () => {
                         designed to keep you motivated and on track.
                     </p>
                 </div>
+                
+                <div className="home_section">
+                    <h2 className="home_subheading">Stay Motivated</h2>
+                    <p className="home_text">
+                        Remember, fitness is not just about looking good — it's about feeling 
+                        confident, energetic, and healthy every single day. Keep pushing, your 
+                        future self will thank you.
+                    </p>
+                </div>
 
                 <div className="card_holder">
                     <div className="cards_home_advantage">
@@ -51,15 +60,6 @@ const Home = () => {
                         lead to massive long-term changes.
                     </p>
                     <NavLink className="start_home" to="/Dashboard" >Start</NavLink>
-                </div>
-
-                <div className="home_section">
-                    <h2 className="home_subheading">Stay Motivated</h2>
-                    <p className="home_text">
-                        Remember, fitness is not just about looking good — it's about feeling 
-                        confident, energetic, and healthy every single day. Keep pushing, your 
-                        future self will thank you.
-                    </p>
                 </div>
             </div>
         </div>
