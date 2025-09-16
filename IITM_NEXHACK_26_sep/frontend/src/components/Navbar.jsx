@@ -9,7 +9,7 @@ const Navbar = () => {
                 <h1 className="heading">MediMap</h1>
             </div>
             <div className="navbar_link_holder">
-                <NavLink to="/" className="top_link" > About </NavLink>
+                <NavLink to="/Home" className="top_link" > About </NavLink>
                 
                 <NavLink to="/Dashboard" className="top_link" > Dashboard </NavLink>
                 

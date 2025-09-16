@@ -6,11 +6,16 @@ import Diet_plan from './components/pages/Dietplan'
 import Workout from './components/pages/Workout'
 import Home from './components/pages/Home'
 import Data from './components/pages/data'
+import Login from './components/pages/login'
 
 function App() {
   const Router = createBrowserRouter([
     {
-      path: '/',
+      path : '/',
+      element : <><Login/></>
+    },
+    {
+      path: '/Home',
       element: <><Navbar /><Home /></>
     },
     {

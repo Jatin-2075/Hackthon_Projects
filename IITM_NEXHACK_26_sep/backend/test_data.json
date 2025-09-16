@@ -8,7 +8,41 @@
       "weight_kg": 62,
       "height_cm": 165,
       "email": "alice@example.com",
-      "password": "hashedpassword1"
+      "password": "hashedpassword1",
+      "vitals": [
+        {
+          "date": "2025-09-14",
+          "blood_pressure": "120/80",
+          "heart_rate": 72,
+          "oxygen_saturation": 98,
+          "sleep_hours": 7
+        }
+      ],
+      "workouts": [
+        {
+          "date": "2025-09-14",
+          "exercise": "Running",
+          "duration_min": 30, 
+          "calories_burned": 250
+        }
+      ],
+      "meals": [
+        {
+          "date": "2025-09-14",
+          "meal_type": "Breakfast",
+          "items": [
+            { "name": "Oatmeal", "calories": 150 },
+            { "name": "Banana", "calories": 100 }
+          ]
+        }
+      ],
+      "goals": [
+        {
+          "goal_type": "Weight Loss",
+          "target_weight_kg": 58,
+          "deadline": "2025-12-31"
+        }
+      ]
     },
     {
       "id": 2,
@@ -18,75 +52,41 @@
       "weight_kg": 75,
       "height_cm": 175,
       "email": "bob@example.com",
-      "password": "hashedpassword2"
-    }
-  ],
-  "vitals": [
-    {
-      "user_id": 1,
-      "date": "2025-09-14",
-      "blood_pressure": "120/80",
-      "heart_rate": 72,
-      "oxygen_saturation": 98,
-      "sleep_hours": 7
-    },
-    {
-      "user_id": 2,
-      "date": "2025-09-14",
-      "blood_pressure": "130/85",
-      "heart_rate": 78,
-      "oxygen_saturation": 97,
-      "sleep_hours": 6
-    }
-  ],
-  "workouts": [
-    {
-      "user_id": 1,
-      "date": "2025-09-14",
-      "exercise": "Running",
-      "duration_min": 30,
-      "calories_burned": 250
-    },
-    {
-      "user_id": 2,
-      "date": "2025-09-14",
-      "exercise": "Cycling",
-      "duration_min": 45,
-      "calories_burned": 400
-    }
-  ],
-  "meals": [
-    {
-      "user_id": 1,
-      "date": "2025-09-14",
-      "meal_type": "Breakfast",
-      "items": [
-        { "name": "Oatmeal", "calories": 150 },
-        { "name": "Banana", "calories": 100 }
+      "password": "hashedpassword2",
+      "vitals": [
+        {
+          "date": "2025-09-14",
+          "blood_pressure": "130/85",
+          "heart_rate": 78,
+          "oxygen_saturation": 97,
+          "sleep_hours": 6
+        }
+      ],
+      "workouts": [
+        {
+          "date": "2025-09-14",
+          "exercise": "Cycling",
+          "duration_min": 45,
+          "calories_burned": 400
+        }
+      ],
+      "meals": [
+        {
+          "date": "2025-09-14",
+          "meal_type": "Lunch",
+          "items": [
+            { "name": "Grilled Chicken", "calories": 300 },
+            { "name": "Salad", "calories": 120 }
+          ]
+        }
+      ],
+      "goals": [
+        {
+          "goal_type": "Muscle Gain",
+          "target_weight_kg": 80,
+          "deadline": "2025-12-31"
+        }
       ]
-    },
-    {
-      "user_id": 2,
-      "date": "2025-09-14",
-      "meal_type": "Lunch",
-      "items": [
-        { "name": "Grilled Chicken", "calories": 300 },
-        { "name": "Salad", "calories": 120 }
-      ]
-    }
-  ],
-  "goals": [
-    {
-      "user_id": 1,
-      "goal_type": "Weight Loss",
-      "target_weight_kg": 58,
-      "deadline": "2025-12-31"
-    },
-    {
-      "user_id": 2,
-      "goal_type": "Muscle Gain",
-      "target_weight_kg": 80,
-      "deadline": "2025-12-31"
     }
   ],
   "health_tips": [
