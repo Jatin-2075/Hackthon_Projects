@@ -12,8 +12,8 @@ app.get("/login_section", (req, res) => {
     res.json(cred );
 });
 
-app.get("/user_info", (req, res) => {
-    const cred = 
-})
+// app.get("/user_info", (req, res) => {
+//     const cred = 
+// })
 
 app.listen(5000, () => console.log("Server is running at http://localhost:5000"));
