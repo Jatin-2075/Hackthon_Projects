@@ -5,15 +5,12 @@ const cors = require('cors');
 app.use(cors());
 app.use(express.json());
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
-
 const data = require("./test_data.json");
 
-app.get('/',(req,res) => {
-    console.log("live")
-    res.send("live")
-})
+app.get('/', (req, res) => {
+    console.log("live");
+    res.send("live");
+});
 
 // login route
 app.post("/login_section", (req, res) => {
@@ -31,4 +28,6 @@ app.post("/login_section", (req, res) => {
     }
 });
 
-app.listen(5000, () => console.log("Server is running at http://localhost:5000"));
+// ✅ only ONE listen
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
