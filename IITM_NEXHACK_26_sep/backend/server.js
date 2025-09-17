@@ -1,19 +1,34 @@
-const express = require('express')
+const express = require('express');
 const app = express();
 const cors = require('cors');
 
 app.use(cors());
 app.use(express.json());
 
-const data =  require("./test_data.json");
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
 
-app.get("/login_section", (req, res) => {
-    const cred = data.map(({email, password}) => ({email, password}));
-    res.json(cred );
+const data = require("./test_data.json");
+
+app.get('/',(req,res) => {
+    console.log("live")
+    res.send("live")
+})
+
+// login route
+app.post("/login_section", (req, res) => {
+    const { email, password } = req.body;
+
+    // find matching user
+    const user = data.users.find(
+        u => u.email === email && u.password === password
+    );
+
+    if (user) {
+        res.json({ success: true, user });
+    } else {
+        res.status(401).json({ success: false, message: "Invalid credentials" });
+    }
 });
-
-// app.get("/user_info", (req, res) => {
-//     const cred = 
-// })
 
 app.listen(5000, () => console.log("Server is running at http://localhost:5000"));
