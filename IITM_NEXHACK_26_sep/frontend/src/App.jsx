@@ -1,12 +1,12 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import Navbar from './components/Navbar'
-import Dashboard from './components/pages/Dashboard'
-import Diet_plan from './components/pages/Dietplan'
-import Workout from './components/pages/Workout'
-import Home from './components/pages/Home'
-import Data from './components/pages/data'
-import Login from './components/pages/login'
+import Dashboard from './components/function/Dashboard'
+import Diet_plan from './components/function/pages/Dietplan'
+import Workout from './components/function/pages/Workout'
+import Home from './components/function/pages/Home'
+import Data from './components/function/pages/data'
+import Login from './components/function/pages/login'
 
 function App() {
   const Router = createBrowserRouter([

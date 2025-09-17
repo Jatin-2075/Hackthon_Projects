@@ -1,6 +1,6 @@
 import React from "react";
-import './style/home.css'
-import './style/card.css'
+import '../style/home.css'
+import '../style/card.css'
 import { NavLink } from "react-router";
 
 const Home = () => {

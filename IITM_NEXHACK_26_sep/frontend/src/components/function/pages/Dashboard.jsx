@@ -1,5 +1,5 @@
 import React from "react";
-import BMI from "./tools/bmi";
+import BMI from "../tools/bmi";
 
 const Dashboard = () => {
     return (
