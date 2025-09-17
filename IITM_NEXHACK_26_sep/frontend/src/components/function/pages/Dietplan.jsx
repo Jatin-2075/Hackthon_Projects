@@ -12,7 +12,7 @@ const Diet_plan = () => {
         fetch(`https://api.api-ninjas.com/v1/nutrition?query=${found}`)
         .then((res) => res.json())
         .then((data) => {
-            /*set the calories and other to the data  */
+            /*set the calories and other to the data  */ 
         })
     }
 

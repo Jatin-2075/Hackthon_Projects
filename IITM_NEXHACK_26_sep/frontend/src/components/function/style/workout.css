@@ -1,0 +1,42 @@
+.workout-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #555;
+}
+
+.exercise-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.exercise-card {
+  margin-bottom: 16px;   /* <-- gap between cards */
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.exercise-name {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.exercise-type,
+.exercise-equipment {
+  font-size: 14px;
+  color: #666;
+}
