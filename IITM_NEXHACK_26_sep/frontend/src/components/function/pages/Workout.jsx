@@ -17,9 +17,15 @@ const Workout_plan = () => {
                     <div className="exercise-card" key={i}>
                         <h3 className="exercise-name">{data.name || "squats"}</h3>
                         <p className="exercise-type">{data.type || "strength"}</p>
-                        <p className="exercise-equipment">{data.equipment || "rod and weight"}</p>
+                        <p className="exercise-equipment">{data.equipment ||  "rod and weight"}</p>
+                        <button type="button" onClick={onclick}>Start</button>
                     </div>
                 ))}
+            </div>
+
+            <div>
+                <h2>Exercise Done</h2>
+                <div></div>
             </div>
         </div>
     );
