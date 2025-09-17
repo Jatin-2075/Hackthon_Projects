@@ -1,11 +1,10 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import Navbar from './components/Navbar'
-import Dashboard from './components/function/Dashboard'
+import Dashboard from './components/function//pages/Dashboard'
 import Diet_plan from './components/function/pages/Dietplan'
 import Workout from './components/function/pages/Workout'
 import Home from './components/function/pages/Home'
-import Data from './components/function/pages/data'
 import Login from './components/function/pages/login'
 
 function App() {
@@ -29,10 +28,6 @@ function App() {
     {
       path: '/Workout',
       element: <><Navbar /><Workout /></>
-    },
-    {
-      path : '/Data',
-      element : <><Navbar/> <Data/> </>
     }
   ])
 

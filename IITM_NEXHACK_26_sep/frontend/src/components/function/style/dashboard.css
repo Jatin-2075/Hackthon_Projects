@@ -1,0 +1,116 @@
+/* Full Page */
+.dashboard-fullpage {
+  min-height: 100vh;
+  width: 100%;
+  padding: 30px;
+  background: linear-gradient(135deg, #f3f9f6, #e0f2f1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* User Info */
+.user-info {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.user-name {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2e7d32;
+}
+.user-age, .user-gender {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Stats Section */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 20px 0;
+}
+.stat-item {
+  background: #e8f5e9;
+  border-radius: 12px;
+  padding: 15px 20px;
+  text-align: center;
+  flex: 1;
+  margin: 0 10px;
+  font-weight: 500;
+  color: #2e7d32;
+}
+
+/* Diet Plan */
+.diet-plan {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 800px;
+}
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1565c0;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.meals {
+  display: flex;
+  justify-content: space-between;
+}
+.meal {
+  background: #fff3e0;
+  padding: 20px;
+  border-radius: 12px;
+  flex: 1;
+  margin: 0 10px;
+  text-align: center;
+  color: #e65100;
+  font-weight: 500;
+}
+
+/* Workout Progress */
+.workout-progress {
+  margin-top: 40px;
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+}
+.progress-circles {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+/* Circular Progress */
+.circle {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background: conic-gradient(#2e7d32 0% 75%, #ddd 75% 100%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.circle:nth-child(2) {
+  background: conic-gradient(#1565c0 0% 50%, #ddd 50% 100%);
+}
+.inner-circle {
+  width: 110px;
+  height: 110px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+}
+.circle p {
+  margin-top: 10px;
+  font-weight: 500;
+}

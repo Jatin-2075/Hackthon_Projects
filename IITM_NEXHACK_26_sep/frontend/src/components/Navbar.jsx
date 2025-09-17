@@ -16,8 +16,6 @@ const Navbar = () => {
                 <NavLink to="/Diet_plan" className="top_link" > Diet Plan </NavLink>
 
                 <NavLink to="/Workout" className="top_link" > Workout </NavLink>
-
-                <NavLink to="/Data" className="top_link" > Data </NavLink>
             </div>
         </div>
     );

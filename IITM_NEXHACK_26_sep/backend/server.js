@@ -1,33 +1,23 @@
 const express = require('express');
-const app = express();
 const cors = require('cors');
+const app = express();
+const PORT = 5000;
 
 app.use(cors());
 app.use(express.json());
 
-const data = require("./test_data.json");
+const data = require('./test_data.json');
 
-app.get('/', (req, res) => {
-    console.log("live");
-    res.send("live");
-});
-
-// login route
-app.post("/login_section", (req, res) => {
+// POST login route
+app.post('/login', (req, res) => {
     const { email, password } = req.body;
+    const user = data.users[email]; // direct access
 
-    // find matching user
-    const user = data.users.find(
-        u => u.email === email && u.password === password
-    );
-
-    if (user) {
-        res.json({ success: true, user });
+    if(user && user.password === password){
+        res.json({ success: true, user }); // send full user data
     } else {
-        res.status(401).json({ success: false, message: "Invalid credentials" });
+        res.json({ success: false, message: "Wrong email or password" });
     }
 });
 
-// ✅ only ONE listen
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
