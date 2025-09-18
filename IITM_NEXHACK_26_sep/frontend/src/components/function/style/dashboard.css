@@ -1,172 +1,91 @@
-/* Full Page */
+/* Dashboard Full Page */
 .dashboard-fullpage {
-  min-height: 100vh;
-  width: 100%;
-  padding: 30px;
-  background: linear-gradient(135deg, #ede9fe, #f5f3ff);
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation: fadeIn 1.2s ease-in-out;
-  font-family: 'Segoe UI', sans-serif;
-  color: #4f46e5;
+  padding: 2rem;
+  background: #f8f9fa;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* User Info */
+/* User Info Card */
 .user-info {
+  background: #ffffff;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
   text-align: center;
-  margin-bottom: 25px;
-  animation: slideDown 1s ease;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 400px;
 }
+
 .user-name {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #4f46e5;
-  text-shadow: 0 2px 6px rgba(79, 70, 229, 0.2);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
 }
-.user-age, .user-gender {
-  font-size: 1.1rem;
-  color: #6d28d9;
+
+.user-age,
+.user-gender {
+  font-size: 1rem;
+  color: #666;
 }
 
 /* Stats Section */
 .stats {
   display: flex;
-  justify-content: space-around;
-  width: 100%;
-  margin: 20px 0;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
   flex-wrap: wrap;
 }
+
 .stat-item {
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 16px;
-  padding: 20px 25px;
-  text-align: center;
-  flex: 1 1 220px;
-  margin: 12px;
+  background: #ffffff;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
   font-weight: 600;
-  color: #4f46e5;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(79, 70, 229, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: zoomFade 0.8s ease forwards;
-}
-.stat-item:hover {
-  transform: translateY(-6px) scale(1.05);
-  box-shadow: 0 8px 24px rgba(79, 70, 229, 0.25);
+  min-width: 120px;
+  text-align: center;
+  color: #444;
 }
 
-/* Diet Plan */
+/* Diet Plan Section */
 .diet-plan {
-  margin-top: 30px;
   width: 100%;
-  max-width: 850px;
+  max-width: 600px;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
 }
+
 .section-title {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #4f46e5;
-  margin-bottom: 15px;
-  text-align: center;
-  text-shadow: 0 1px 3px rgba(79, 70, 229, 0.15);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #222;
 }
-.meals {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
+
 .meal {
-  background: rgba(255, 255, 255, 0.8);
-  padding: 20px;
-  border-radius: 16px;
-  flex: 1 1 250px;
-  margin: 12px;
-  text-align: center;
-  color: #6d28d9;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(109, 40, 217, 0.2);
-}
-.meal:hover {
-  background: #ffffff;
-  transform: rotate(-1deg) scale(1.04);
-  animation: pulseGlow 1.5s infinite;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 1rem 0 0.5rem 0;
+  color: #444;
 }
 
-/* Workout Progress */
-.workout-progress {
-  margin-top: 40px;
-  text-align: center;
-  width: 100%;
-  max-width: 850px;
-}
-.progress-circles {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-  flex-wrap: wrap;
+.meals {
+  background: #f5f7ff;
+  padding: 0.75rem 1rem;
+  border-radius: 0.8rem;
+  margin-bottom: 0.5rem;
+  transition: transform 0.2s;
 }
 
-/* Circular Progress */
-.circle {
-  position: relative;
-  width: 160px;
-  height: 160px;
-  background: conic-gradient(#4f46e5 0% 75%, #ddd 75% 100%);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  animation: slideUpFade 1s ease forwards;
-  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
-}
-.circle:nth-child(2) {
-  background: conic-gradient(#7c3aed 0% 50%, #ddd 50% 100%);
-}
-.inner-circle {
-  width: 115px;
-  height: 115px;
-  background: #ffffff;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #4f46e5;
-  box-shadow: inset 0 2px 8px rgba(0,0,0,0.1);
-}
-.circle p {
-  margin-top: 10px;
-  font-weight: 500;
-  color: #6d28d9;
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slideDown {
-  from { transform: translateY(-30px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes zoomFade {
-  from { transform: scale(0.8); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
-}
-
-@keyframes pulseGlow {
-  0% { box-shadow: 0 0 0 rgba(79, 70, 229, 0.3); }
-  50% { box-shadow: 0 0 20px rgba(79, 70, 229, 0.6); }
-  100% { box-shadow: 0 0 0 rgba(79, 70, 229, 0.3); }
-}
-
-@keyframes slideUpFade {
-  from { transform: translateY(40px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+.meals:hover {
+  transform: scale(1.02);
+  background: #e9ecff;
 }

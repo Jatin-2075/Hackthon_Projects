@@ -8,13 +8,12 @@ app.use(express.json());
 
 const data = require('./test_data.json');
 
-// POST login route
 app.post('/login', (req, res) => {
     const { email, password } = req.body;
-    const user = data.users[email]; // direct access
+    const user = data.users[email];
 
     if(user && user.password === password){
-        res.json({ success: true, user }); // send full user data
+        res.json({ success: true, user });
     } else {
         res.json({ success: false, message: "Wrong email or password" });
     }

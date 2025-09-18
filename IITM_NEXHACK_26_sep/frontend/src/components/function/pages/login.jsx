@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom';
 const Login = () => {
     const [username, setUsername] = useState("");
     const [userpass, setUserpass] = useState("");
-    const [finaldata, setfinaldata] = useState({});
     const navigate = useNavigate();
 
     const onclick = async () => {
@@ -19,13 +18,11 @@ const Login = () => {
             const data = await res.json();
 
             if (data.success) {
-                console.log(data.user);
-                setfinaldata(data.user);
-
-                // Navigate to Home page and pass data via state
+                localStorage.setItem("data", JSON.stringify(data.user));
+                console.log("Saved:", JSON.parse(localStorage.getItem("data")));
                 navigate('/home', { state: data.user });
             } else {
-                alert(data.message); // wrong email/password
+                alert(data.message); 
             }
         } catch (err) {
             console.log(err);

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../style/diet_plan.css";
 
-const Diet_plan = () => {
+const Diet_plan = ( { data } ) => {
     const [eat, seteat] = useState("");
     const [meal, setmeal] = useState("");
     const [dailycalories, setdailycalories] = useState(2000);

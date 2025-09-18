@@ -17,7 +17,8 @@
         { "exercise": "Running", "duration_min": 30, "calories_burned": 250 }
       ],
       "meals": [
-        { "meal_type": "Breakfast", "items": ["Oatmeal", "Banana"] }
+        { "meal_type": "Breakfast", "items": ["Oatmeal", "Banana"] },
+        { "meal_type": "Lunch", "items" : ["Chicken", "rice"]}
       ],
       "goals": { "type": "Weight Loss", "target_weight_kg": 58 }
     },
