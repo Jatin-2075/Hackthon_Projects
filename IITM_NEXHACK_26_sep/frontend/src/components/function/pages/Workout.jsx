@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../style/workout.css";
 
 const Workout_plan = () => {
     const [exercise, setExercise] = useState([]);
     const [user, setUser] = useState(null);
+    const [activeExercise, setActiveExercise] = useState(null);
+    const videoRef = useRef(null);
 
     useEffect(() => {
         const savedUser = localStorage.getItem("user");
@@ -18,8 +20,18 @@ const Workout_plan = () => {
         ]);
     }, []);
 
-    const handleStart = (exerciseName) => {
+    const handleStart = async (exerciseName) => {
+        setActiveExercise(exerciseName);
         console.log(`${exerciseName} started!`);
+
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+            if (videoRef.current) {
+                videoRef.current.srcObject = stream;
+            }
+        } catch (err) {
+            console.error("Camera error:", err);
+        }
     };
 
     return (
@@ -27,9 +39,7 @@ const Workout_plan = () => {
             <div className="header">
                 <h1 className="title">Workout</h1>
                 <p className="subtitle">
-                    {user
-                        ? `Hi, ${user.name} let's start`
-                        : "Hi, Guest let's start"}
+                    {user ? `Hi, ${user.name} let's start` : "Hi, Guest let's start"}
                 </p>
             </div>
 
@@ -45,6 +55,18 @@ const Workout_plan = () => {
                     </div>
                 ))}
             </div>
+
+            {activeExercise && (
+                <div className="camera-preview">
+                    <h2>Camera for {activeExercise}</h2>
+                    <video
+                        ref={videoRef}
+                        autoPlay
+                        playsInline
+                        style={{ width: "400px", borderRadius: "10px" }}
+                    />
+                </div>
+            )}
 
             <div>
                 <h2>Exercise Done</h2>
