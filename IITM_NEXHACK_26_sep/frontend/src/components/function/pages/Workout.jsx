@@ -6,13 +6,11 @@ const Workout_plan = () => {
     const [user, setUser] = useState(null);
 
     useEffect(() => {
-        // get user from localStorage
         const savedUser = localStorage.getItem("user");
         if (savedUser) {
             setUser(JSON.parse(savedUser));
         }
 
-        // later you can fetch exercise data from API
         setExercise([
             { name: "Push Ups", type: "strength", equipment: "none" },
             { name: "Squats", type: "strength", equipment: "bodyweight" },
