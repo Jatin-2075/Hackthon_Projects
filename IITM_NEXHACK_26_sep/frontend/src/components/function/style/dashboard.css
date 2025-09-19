@@ -1,91 +1,145 @@
-/* Dashboard Full Page */
-.dashboard-fullpage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
-  background: #f8f9fa;
-  min-height: 100vh;
-  font-family: 'Poppins', sans-serif;
+/* dashboard.css */
+
+/* Base setup */
+body {
+  margin: 0;
+  font-family: "Inter", Arial, sans-serif;
+  background: #f5f7fa;
+  color: #333;
 }
 
-/* User Info Card */
+.dashboard-fullpage {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* User Info */
 .user-info {
-  background: #ffffff;
-  padding: 1.5rem 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
   text-align: center;
   margin-bottom: 2rem;
-  width: 100%;
-  max-width: 400px;
+  animation: fadeIn 0.8s ease-in;
 }
 
 .user-name {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 700;
-  color: #333;
+  color: #2b6777;
 }
 
 .user-age,
 .user-gender {
   font-size: 1rem;
-  color: #666;
+  color: #555;
+}
+
+/* Goals Section */
+.goals-stats {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+.goals-stats:hover {
+  transform: translateY(-5px);
+}
+
+.goal-heading {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #2b6777;
+}
+
+.goal-type,
+.goal-set {
+  font-weight: 600;
+  margin-top: 0.8rem;
+  color: #444;
+}
+
+.goals-type-js,
+.goal-set-js {
+  color: #52b788;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.goals-type-js:hover,
+.goal-set-js:hover {
+  color: #40916c;
 }
 
 /* Stats Section */
 .stats {
   display: flex;
-  justify-content: center;
-  gap: 1.5rem;
+  justify-content: space-between;
   margin-bottom: 2rem;
-  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .stat-item {
+  flex: 1;
   background: #ffffff;
-  padding: 1rem 1.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
-  font-weight: 600;
-  min-width: 120px;
+  padding: 1.2rem;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
   text-align: center;
-  color: #444;
+  font-size: 1.2rem;
+  color: #2b6777;
+  font-weight: 600;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.stat-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
 }
 
-/* Diet Plan Section */
+/* Diet Plan */
 .diet-plan {
-  width: 100%;
-  max-width: 600px;
   background: #ffffff;
   padding: 1.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  animation: fadeInUp 0.8s ease-in;
 }
 
 .section-title {
   font-size: 1.5rem;
-  font-weight: 700;
   margin-bottom: 1rem;
-  color: #222;
+  color: #2b6777;
 }
 
 .meal {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin: 1rem 0 0.5rem 0;
+  font-weight: bold;
+  margin-top: 1.2rem;
+  font-size: 1.1rem;
   color: #444;
+  border-left: 4px solid #52b788;
+  padding-left: 0.5rem;
 }
 
 .meals {
-  background: #f5f7ff;
-  padding: 0.75rem 1rem;
-  border-radius: 0.8rem;
-  margin-bottom: 0.5rem;
-  transition: transform 0.2s;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  background: #f8f9fa;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.meals:hover {
+  background: #eafaf1;
+  transform: translateX(5px);
 }
 
-.meals:hover {
-  transform: scale(1.02);
-  background: #e9ecff;
+/* Animations */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInUp {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
 }

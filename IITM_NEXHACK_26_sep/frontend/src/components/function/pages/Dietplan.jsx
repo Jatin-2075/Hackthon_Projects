@@ -7,27 +7,8 @@ const Diet_plan = ( { data } ) => {
     const [dailycalories, setdailycalories] = useState(2000);
     const [caloriesconsumed, setcaloriesconsumed] = useState(0);
 
-    const handleClick = async () => {
-        try {
-            const found = encodeURIComponent(eat);
-            const res = await fetch(
-                `https://api.api-ninjas.com/v1/nutrition?query=${found}`,
-                {
-                    headers: { "X-Api-Key": "YOUR_API_KEY" },
-                }
-            );
-            const data = await res.json();
-            if (data && data.length > 0) {
-                const calories = data[0].calories;
-                setcaloriesconsumed((prev) => prev + calories);
-                alert(`${eat} has ${calories} calories`);
-            } else {
-                alert("No nutrition data found.");
-            }
-        } catch (err) {
-            console.error(err);
-            alert("Error fetching nutrition data.");
-        }
+    const handleClick = () => {
+        
     };
 
     return (

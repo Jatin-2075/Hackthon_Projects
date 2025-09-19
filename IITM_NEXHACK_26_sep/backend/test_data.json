@@ -2,7 +2,7 @@
   "users": {
     "alice@example.com": {
       "password": "123",
-      "name": "Alice",
+      "name": "Aleice",
       "age": 25,
       "gender": "female",
       "weight_kg": 62,
@@ -18,9 +18,10 @@
       ],
       "meals": [
         { "meal_type": "Breakfast", "items": ["Oatmeal", "Banana"] },
-        { "meal_type": "Lunch", "items" : ["Chicken", "rice"]}
+        { "meal_type": "Lunch", "items" : ["Chicken", "rice"]},
+        { "meal_type": "dinner", "items": ["milk", "daal", "chappati"]}
       ],
-      "goals": { "type": "Weight Loss", "target_weight_kg": 58 }
+      "goals": { "type": "Weight Loss", "target": 58 }
     },
     "bob@example.com": {
       "password": "456",
@@ -41,7 +42,7 @@
       "meals": [
         { "meal_type": "Lunch", "items": ["Grilled Chicken", "Salad"] }
       ],
-      "goals": { "type": "Muscle Gain", "target_weight_kg": 80 }
+      "goals": { "type": "Muscle Gain", "target": 80 }
     },
     "carol@example.com": {
       "password": "789",
